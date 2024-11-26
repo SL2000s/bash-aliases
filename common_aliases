@@ -1,0 +1,77 @@
+alias bashup="source ~/.bashrc"
+
+alias cd1="cd ..; ls"
+alias cd2="cd ../..; ls"
+alias cd3="cd ../../..; ls"
+alias cd4="cd ../../../..; ls"
+alias cd5="cd ../../../../..; ls"
+alias cd6="cd ../../../../../..; ls"
+
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias enw="emacs -nw"
+
+alias py="python3"
+alias python="python3"
+alias pipin="py -m pip install"
+
+alias jl="julia"
+
+alias gst="git status"
+alias gadd="git add"
+alias grm="git rm"
+alias gadal="git add --all"
+alias grm="git rm"
+alias gcomm="git commit -m"
+alias gdiff="git diff"
+alias grest="git restore --staged"
+alias gpush="git push"
+alias gamno="git commit --amend --no-edit"
+alias gpull="git pull"
+alias bl="git branch -r --sort=-committerdate --format=\"%(refname:short) - Last commit: %(committerdate:relative) by %(authorname)\""
+
+alias enwbash="enw ~/.bashrc; bashup"
+alias enwal="enw ~/.bash_aliases; bashup"
+alias enwem="enw ~/.emacs.d/init.el"
+
+alias ps="poetry shell"
+
+pwdf() {
+    if [ -z "$1" ]; then
+        echo "Usage: pwdf <filename>"
+        return 1
+    fi
+    echo "$(pwd)/$1"
+}
+alias pwdf=pwdf
+
+grf() {
+    if [ -z "$1" ]; then
+        echo "Usage: grf <whole_or_part_of_filename>"
+        return 1
+    fi
+    find . -type f -name "*$1*"
+}
+grd() {
+    if [ -z "$1" ]; then
+        echo "Usage: grf <whole_or_part_of_dirname>"
+        return 1
+    fi
+    find . -type d -name "*$1*"
+}
+alias gr="grep -r"
+alias grf=grf
+alias grff="find . -name"
+alias grd=grd
+
+alias findbig="find . -type f -size +100M -exec ls -lh {} \;"
+
+gag() {
+ #if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval `ssh-agent -s`
+  ssh-add ~/.ssh/id_rsa_github
+ #fi
+}
+alias gag=gag
