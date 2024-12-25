@@ -33,8 +33,8 @@ alias gpull="git pull"
 alias bl="git branch -r --sort=-committerdate --format=\"%(refname:short) - Last commit: %(committerdate:relative) by %(authorname)\""
 
 alias enwbash="enw ~/.bashrc; bashup"
-alias enwals="enw ~/bash_aliases_specific; bashup"
-alias enwalc="enw ~/bash_aliases_common; bashup"
+alias enwals="enw ~/bash_aliases/system_aliases; bashup"
+alias enwalc="enw ~/bash_aliases/common_aliases; bashup"
 alias enwem="enw ~/.emacs.d/init.el"
 
 alias ps="poetry shell"
