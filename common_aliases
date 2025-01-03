@@ -19,6 +19,7 @@ alias pipin="py -m pip install"
 
 alias jl="julia"
 
+alias ginpu=ginpu
 alias gst="git status"
 alias gadd="git add"
 alias grm="git rm"
@@ -31,6 +32,16 @@ alias gpush="git push"
 alias gamno="git commit --amend --no-edit"
 alias gpull="git pull"
 alias bl="git branch -r --sort=-committerdate --format=\"%(refname:short) - Last commit: %(committerdate:relative) by %(authorname)\""
+alias gin="git init; git branch -M main; git commit --allow-empty -m \"chore: init\""
+ginpu() {
+    if [ -z "$1" ]; then
+        echo "Error: Missing remote URL."
+        echo "Usage: ginpu <REMOTE_URL>"
+        return 1
+    fi
+    gin && git remote add origin "$1" && git push -u origin main
+}
+alias ginpu=ginpu
 
 alias enwbash="enw ~/.bashrc; bashup"
 alias enwals="enw $SYSTEM_BASH_ALIASES_PATH; bashup"
