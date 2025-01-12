@@ -87,3 +87,5 @@ gag() {
  #fi
 }
 alias gag=gag
+
+alias poff="systemctl poweroff"
