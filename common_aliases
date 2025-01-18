@@ -44,8 +44,8 @@ ginpu() {
 alias ginpu=ginpu
 
 alias enwbash="enw ~/.bashrc; bashup"
-alias enwals="enw $SYSTEM_BASH_ALIASES_PATH; bashup"
-alias enwalc="enw $COMMON_BASH_ALIASES_PATH; bashup"
+alias enwals="enw ~/.bashrc.d/system_aliases; bashup"
+alias enwalc="enw ~/.bashrc.d/common_aliases; bashup"
 alias enwem="enw ~/.emacs.d/init.el"
 
 alias ps="poetry shell"
