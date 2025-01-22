@@ -91,3 +91,17 @@ alias gag=gag
 alias poff="systemctl poweroff"
 
 alias cc="clear"
+
+# Change to the real location of a symlink or the parent directory if it's a file
+cdreal() {
+    if [[ -L "$1" || -e "$1" ]]; then
+        target=$(realpath "$1")  # Resolve the real path
+        if [[ -f "$target" ]]; then
+            cd "$(dirname "$target")" || echo "Failed to navigate to the parent directory."
+        else
+            cd "$target" || echo "Failed to navigate to the directory."
+        fi
+    else
+        echo "Error: '$1' is not a valid file or symlink."
+    fi
+}
