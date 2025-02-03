@@ -46,6 +46,7 @@ alias ginpu=ginpu
 alias enwbash="enw ~/.bashrc; bashup"
 alias enwals="enw ~/.bashrc.d/system_aliases; bashup"
 alias enwalc="enw ~/.bashrc.d/common_aliases; bashup"
+alias enwp="enw ~/.bashrc.d/path; bashup"
 alias enwem="enw ~/.emacs.d/init.el"
 
 alias ps="poetry shell"
@@ -103,5 +104,13 @@ cdreal() {
         fi
     else
         echo "Error: '$1' is not a valid file or symlink."
+    fi
+}
+
+intellij() {
+    if [ -z "$1" ]; then
+        nohup idea &> /dev/null &
+    else
+        nohup idea "$1"  &> /dev/null &
     fi
 }
