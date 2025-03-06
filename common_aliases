@@ -114,3 +114,7 @@ intellij() {
         nohup idea "$1"  &> /dev/null &
     fi
 }
+
+co() {
+    "$@" | xclip -selection clipboard
+}
