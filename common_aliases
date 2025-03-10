@@ -49,7 +49,7 @@ alias enwalc="enw ~/.bashrc.d/common_aliases; bashup"
 alias enwp="enw ~/.bashrc.d/path; bashup"
 alias enwem="enw ~/.emacs.d/init.el"
 
-alias ps="poetry shell"
+alias psh="poetry shell"
 
 pwdf() {
     if [ -z "$1" ]; then
