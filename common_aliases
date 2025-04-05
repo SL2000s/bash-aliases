@@ -1,3 +1,4 @@
+
 alias bashup="source ~/.bashrc"
 
 alias cd1="cd ..; ls"
@@ -10,6 +11,21 @@ alias cd6="cd ../../../../../..; ls"
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+
+
+alias pm="podman"
+alias pmi="podman images"
+alias pmps="podman ps"
+alias pmr="podman run"
+alias pmsal="podman ps -q | xargs podman stop"
+alias pmb="podman build"
+alias pms="podman start"
+alias pmr="podman run -d"
+alias pmrmi="podman rmi"
+alias pml="podman logs"
+
+alias kc="kubectl"
+
 
 alias enw="emacs -nw"
 
@@ -50,6 +66,7 @@ alias enwp="enw ~/.bashrc.d/path; bashup"
 alias enwem="enw ~/.emacs.d/init.el"
 
 alias psh="poetry shell"
+
 
 pwdf() {
     if [ -z "$1" ]; then
