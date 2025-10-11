@@ -50,6 +50,7 @@ alias gpull="git pull"
 alias bl="git branch -r --sort=-committerdate --format=\"%(refname:short) - Last commit: %(committerdate:relative) by %(authorname)\""
 alias gin="git init; git branch -M main; git commit --allow-empty -m \"chore: init\""
 alias gincom="git commit --allow-empty -m \"chore: init\""
+alias ginpush="git push --set-upstream origin main"
 ginpu() {
     if [ -z "$1" ]; then
         echo "Error: Missing remote URL."
