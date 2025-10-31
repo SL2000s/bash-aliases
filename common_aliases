@@ -69,6 +69,7 @@ alias enwem="enw ~/.emacs.d/init.el"
 
 alias psh="poetry shell"
 
+alias ch="code . --disable-gpu"
 
 pwdf() {
     if [ -z "$1" ]; then
