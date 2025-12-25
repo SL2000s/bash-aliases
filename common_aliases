@@ -139,3 +139,22 @@ intellij() {
 co() {
     "$@" | xclip -selection clipboard
 }
+
+
+addcb() {
+    local target_dir="${1%/}"
+    if [ -z "$target_dir" ]; then
+        echo "Usage: addcb <path>"
+        return 1
+    fi
+
+    # Create the directory if it doesn't exist
+    mkdir -p "$target_dir"
+
+    local bib_path="${target_dir}/cryptobib"
+
+    echo "While waiting on cloning, copy something like this into your LaTeX main file:"
+    echo "\\bibliography{${bib_path}/crypto.bib, ${bib_path}/abbrev1.bib}"
+
+    git submodule add https://github.com/cryptobib/export "$bib_path"
+}
