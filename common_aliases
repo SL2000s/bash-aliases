@@ -39,6 +39,7 @@ alias ginpu=ginpu
 alias gst="git status"
 alias gadd="git add"
 alias grm="git rm"
+alias grv="git remote -v"
 alias gadal="git add --all"
 alias grm="git rm"
 alias gcomm="git commit -m"
