@@ -32,6 +32,7 @@ alias enw="emacs -nw"
 alias py="python3"
 alias python="python3"
 alias pipin="py -m pip install"
+alias pt="pytest"
 
 alias jl="julia"
 
