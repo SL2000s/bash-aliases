@@ -62,6 +62,7 @@ ginpu() {
     gin && git remote add origin "$1" && git push -u origin main
 }
 alias ginpu=ginpu
+alias gaddcb="git submodule add https://github.com/cryptobib/export"
 
 alias enwbash="enw ~/.bashrc; bashup"
 alias enwals="enw ~/.bashrc.d/system_aliases; bashup"
